@@ -1,4 +1,12 @@
 <router-outlet></router-outlet>
-<div *ngFor="let question of allQuestions; let idx = index">
-  <app-quiz [question]= question (answerSelected)="onAnswerSelected($event)"></app-quiz>
+
+<div class="container">
+  <form #quizForm="ngForm" class="form-group" (ngSubmit)="onSubmit()">
+    <div *ngFor="let question of allQuestions; let idx = index">
+      <app-quiz [question]= question (answerSelected)="onAnswerSelected($event)"></app-quiz>
+    </div>
+    <button type="submit" class="btn btn-primary">
+      Submit Form
+    </button>
+  </form>
 </div>

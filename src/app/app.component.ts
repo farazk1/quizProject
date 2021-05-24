@@ -21,7 +21,7 @@ export class AppComponent {
     @ViewChild('questionForm') questionForm: any;
     @ViewChild('questionTest') questionTest : any;
 
-
+    answerArray = [];
     allQuestions: any = [{
       "id": 1,
       "question": "What is the capital of Belgium?",
@@ -62,6 +62,11 @@ export class AppComponent {
 
   onAnswerSelected(event){
     console.log("app component answer: ",event);
+    this.answerArray.push(event);
+  }
+
+  onSubmit(){
+    console.log("Submit: ",this.answerArray);
   }
 
 }
