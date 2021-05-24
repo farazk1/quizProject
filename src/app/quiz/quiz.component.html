@@ -1,0 +1,30 @@
+
+<!-- <ngx-radiobutton
+  *ngFor="let season of seasons"
+  [checked]="favoriteSeason === season"
+  (change)="favoriteSeason = season"
+  [disabled]="disabled">
+  {{season}}
+</ngx-radiobutton> -->
+<div *ngIf = "isLoaded">
+          <div class="form-group">
+            <label for="gender">{{question.question}}</label>
+            <div>
+              <input [id]="id" type="radio" [value]="question.a" [name]="question.a" [disabled]="disabled" (change)="changeAnswer($event)">
+              <label for="male"> {{question.a}}</label>
+           </div>
+           <div>
+            <input [id]="id" type="radio" [value]="question.b" [name]="question.b" [disabled]="disabled" (change)="changeAnswer($event)">
+            <label for="male"> {{question.b}}</label>
+         </div>
+         <div>
+            <input [id]="id" type="radio" [value]="question.c" [name]="question.c" [disabled]="disabled" (change)="changeAnswer($event)">
+            <label for="male"> {{question.c}}</label>
+         </div>
+         <div>
+            <input [id]="id" type="radio" [value]="question.d" [name]="question.d" [disabled]="disabled" (change)="changeAnswer($event)">
+            <label for="male"> {{question.d}}</label>
+         </div>
+              
+        </div>
+</div>
